@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <option name="separateProdTestSources" value="true" />
+    <profile name="sbt 1" modules="New-Project-School,New-Project-School.main,New-Project-School.test,gremlin-zio-api,gremlin-zio-api.main,gremlin-zio-api.main~1,gremlin-zio-api.test,gremlin-zio-api.test~1" />
+  </component>
+</project>

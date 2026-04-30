@@ -4,7 +4,7 @@ import org.apache.tinkerpop.gremlin.driver.{Client, Cluster}
 import org.apache.tinkerpop.gremlin.driver.remote.DriverRemoteConnection
 import org.apache.tinkerpop.gremlin.process.traversal.AnonymousTraversalSource.traversal
 import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSource
-import routes.{ClassRoutes, CourseRoutes, DisciplineRoutes, StudentRoutes}
+import routes.{StudentRoutes, ClassRoutes, DisciplineRoutes, CourseRoutes}
 import services.student.StudentService
 import services.classe.ClassService
 import services.discipline.DisciplineService

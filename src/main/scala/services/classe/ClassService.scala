@@ -39,7 +39,7 @@ case class ClassServiceImpl(g: GraphTraversalSource) extends ClassService {
           .map(_.asInstanceOf[java.util.List[String]].get(0))
           .getOrElse("")
 
-        Class(id, label, name,number)
+        Class(id, label, name, number)
       }.toList
     }.tapError(e => ZIO.logError(s"GET Error: ${e.getMessage}"))
 }

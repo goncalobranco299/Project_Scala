@@ -10,15 +10,15 @@ object CourseRoutes {
 
   val app: HttpApp[CourseService, Throwable] = Http.collectZIO[Request] {
 
-    // List all class (GET)
-    case Method.GET -> !! / "class" =>
+    // List all course (GET)
+    case Method.GET -> !! / "course" =>
       for {
         service <- ZIO.service[CourseService]
         list <- service.getCourse.tapError(e => ZIO.logError(e.getMessage))
       } yield Response.json(list.toJson)
 
-    // Create a class (POST)
-    case req @ Method.POST -> !! / "class" =>
+    // Create a course (POST)
+    case req @ Method.POST -> !! / "course" =>
       for {
         body    <- req.body.asString
         request <- ZIO.fromEither(body.fromJson[CourseRequest])

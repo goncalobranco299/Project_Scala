@@ -24,7 +24,7 @@ val app: HttpApp[StudentService, Throwable] = Http.collectZIO[Request] {
       request <- ZIO.fromEither(body.fromJson[StudentRequest])
         .mapError(e => new Exception(s"Invalid JSON: $e"))
       service <- ZIO.service[StudentService]
-      msg     <- service.postStudent(request.name, request.age)
+      msg  <- service.postStudent(request, request.classId)
     } yield Response.text(msg)
-}
   }
+}

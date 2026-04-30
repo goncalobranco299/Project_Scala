@@ -26,7 +26,6 @@ case class CourseServiceImpl(g: GraphTraversalSource) extends CourseService {
       nodes.map { map =>
         val id    = map.get(org.apache.tinkerpop.gremlin.structure.T.id).toString
         val label = map.get(org.apache.tinkerpop.gremlin.structure.T.label).toString
-
         val name  = map.get("name").asInstanceOf[java.util.List[String]].get(0)
         Course(id, label, name)
       }.toList

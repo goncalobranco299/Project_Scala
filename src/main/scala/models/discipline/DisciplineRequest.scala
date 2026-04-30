@@ -1,8 +1,9 @@
 package models.discipline
+import models.teacher.TeacherRequest
 import zio.json.{DeriveJsonDecoder, JsonDecoder}
 
 
-case class DisciplineRequest(name: String, hours: Int)
+case class DisciplineRequest(name: String, hours: Int, teacherId: String, teacherRequest: TeacherRequest)
 
 
 object DisciplineRequest {
